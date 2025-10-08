@@ -7,194 +7,507 @@
     <meta name="description" content="Proveedor líder de servicios de internet en la zona Istmo. Cobertura en Juchitán, El Espinal, Ixtaltepec, La Ventosa, La Venta, Unión Hidalgo y más. Planes desde 30 Mbps hasta 100 Mbps. Acortando la brecha digital.">
     <meta name="keywords" content="internet, ISP, Juchitán, Istmo, El Espinal, Ixtaltepec, La Ventosa, La Venta, Unión Hidalgo, México en línea, fibra óptica, internet hogar, internet empresarial">
     <link rel="canonical" href="https://www.mexicoenlinea.mx/">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/whatsapp-widget.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#inicio">
-                    <img src="images/logo.png" alt="México en línea - Acortando la brecha digital">
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#inicio" class="flex items-center">
+                    <img src="images/logo.png" alt="México en línea - Acortando la brecha digital" class="h-12">
                 </a>
             </div>
-            <div class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#planes">Planes</a>
-                <a href="#cobertura">Cobertura</a>
-                <a href="#contacto">Contacto</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#inicio" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Inicio</a>
+                <a href="#servicios" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Servicios</a>
+                <a href="#planes" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Planes</a>
+                <a href="#cobertura" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Cobertura</a>
+                <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Contacto</a>
             </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="md:hidden">
+                <button class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
         </nav>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Internet de Alta Velocidad, "Acortando la brecha digital"</h1>
-            <p>Proveedor líder de servicios de internet en la región del Istmo, brindando conexión confiable y veloz para hogares y negocios</p>
-            <a href="#planes" class="cta-button">Ver Planes</a>
-        </div>
-    </section>
-
-    <section id="servicios" class="services">
-        <h2>Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-wifi"></i>
-                <h3>Internet Residencial</h3>
-                <p>Conexión de alta velocidad para tu hogar</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-building"></i>
-                <h3>Internet Empresarial</h3>
-                <p>Soluciones dedicadas para empresas</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-headset"></i>
-                <h3>Soporte 24/7</h3>
-                <p>Asistencia técnica disponible todo el día</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="planes" class="plans">
-        <h2>Planes de Internet</h2>
-        <div class="plans-grid">
-            <div class="plan-card">
-                <h3>Plan Básico</h3>
-                <div class="price">$300</div>
-                <ul>
-                    <li>30 Mbps</li>
-                    <li>Ideal para hogares</li>
-                    <li>WiFi incluido</li>
-                    <li>Soporte básico</li>
-                </ul>
-                <a href="#contacto" class="plan-button">Contratar</a>
-            </div>
-            <div class="plan-card featured">
-                <h3>Plan Medio</h3>
-                <div class="price">$350</div>
-                <ul>
-                    <li>50 Mbps</li>
-                    <li>Ideal para familias</li>
-                    <li>WiFi de alta potencia</li>
-                    <li>Soporte prioritario</li>
-                </ul>
-                <a href="#contacto" class="plan-button">Contratar</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plan Avanzado</h3>
-                <div class="price">$400</div>
-                <ul>
-                    <li>100 Mbps</li>
-                    <li>IP fija</li>
-                    <li>Soporte 24/7</li>
-                    <li>SLA garantizado</li>
-                </ul>
-                <a href="#contacto" class="plan-button">Contratar</a>
+    <section id="inicio" class="relative min-h-screen flex items-center pt-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="absolute inset-0 bg-gray-900 opacity-10 pattern-grid-lg"></div>
+        <div class="container mx-auto px-4 py-16 relative">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="font-bold leading-tight mb-6">
+                    <span class="block text-5xl md:text-6xl lg:text-7xl text-green-600 mb-2">Internet de Alta Velocidad</span>
+                    <span class="block text-3xl md:text-4xl lg:text-5xl text-blue-600">"Acortando la brecha digital"</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                    Proveedor líder de servicios de internet en la región del Istmo, brindando conexión confiable y veloz para hogares y negocios
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#planes" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        Ver Planes
+                    </a>
+                    <a href="#contacto" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 border-2 border-blue-600 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        Contáctanos
+                    </a>
+                </div>
+                <div class="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">100+</div>
+                        <div class="text-gray-600">Clientes Satisfechos</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">10+</div>
+                        <div class="text-gray-600">Localidades</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                        <div class="text-gray-600">Soporte Técnico</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="cobertura" class="coverage">
-        <h2>Área de Cobertura</h2>
-        <div class="coverage-content">
-            <div class="coverage-text">
-                <p>Brindamos servicio en toda la zona del Istmo de Tehuantepec:</p>
-                <ul>
-                    <li>Juchitán de Zaragoza</li>
-                    <li>El Espinal</li>
-                    <li>Ciudad Ixtaltepec</li>
-                    <li>La Ventosa</li>
-                    <li>La Venta</li>
-                    <li>Unión Hidalgo</li>
-                    <li>La Blanca</li>
-                    <li>Cazaderos</li>
-                    <li>Cerro Iguana</li>
-                    <li>¡Y seguimos en expansión!</li>
-                </ul>
+    <section id="servicios" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
             </div>
-            <div class="coverage-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15283.00584614654!2d-95.0229937!3d16.4331021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1696661400000!5m2!1ses!2smx"
-                    width="100%"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact">
-        <h2>Contáctanos</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Información de Contacto</h3>
-                <p><i class="fas fa-phone"></i> 971 164 6537</p>
-                <p><i class="fab fa-whatsapp"></i> 971 164 6537</p>
-                <p><i class="fas fa-location-dot"></i> Calle 5 de Septiembre #116, Col. Centro, Juchitán de Zaragoza, Oax. CP.70000</p>
-            </div>
-            <form class="contact-form" id="contactForm" onsubmit="return sendToWhatsApp(event)">
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
-                <select name="plan" id="plan" required>
-                    <option value="">Selecciona un Plan</option>
-                    <option value="Plan Básico - 30 Mbps">Plan Básico - 30 Mbps</option>
-                    <option value="Plan Medio - 50 Mbps">Plan Medio - 50 Mbps</option>
-                    <option value="Plan Avanzado - 100 Mbps">Plan Avanzado - 100 Mbps</option>
-                </select>
-                <textarea name="mensaje" id="mensaje" placeholder="Mensaje adicional (opcional)"></textarea>
-                <button type="submit" class="submit-button">Enviar por WhatsApp</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section company-info">
-                <h4>México en línea</h4>
-                <p>Proveedor líder de servicios de internet en la zona Istmo</p>
-                <div class="footer-coverage">
-                    <h5>Zonas de Cobertura:</h5>
-                    <ul>
-                        <li>Juchitán de Zaragoza</li>
-                        <li>El Espinal</li>
-                        <li>Ciudad Ixtaltepec</li>
-                        <li>La Ventosa</li>
-                        <li>La Venta</li>
-                        <li>Unión Hidalgo</li>
-                        <li>La Blanca</li>
-                        <li>Cazaderos</li>
-                        <li>Cerro Iguana</li>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-wifi text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">Internet Residencial</h3>
+                    <p class="text-gray-600 text-center">Conexión de alta velocidad para tu hogar con instalación profesional y equipos de última generación.</p>
+                    <ul class="mt-6 space-y-3">
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Velocidades desde 30Mbps
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            WiFi incluido
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Sin plazos forzosos
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-building text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">Internet Empresarial</h3>
+                    <p class="text-gray-600 text-center">Soluciones dedicadas para empresas con garantía de servicio y soporte prioritario.</p>
+                    <ul class="mt-6 space-y-3">
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            IP Fija incluida
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Soporte prioritario
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            SLA garantizado
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-headset text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">Soporte 24/7</h3>
+                    <p class="text-gray-600 text-center">Asistencia técnica disponible todo el día, todos los días del año.</p>
+                    <ul class="mt-6 space-y-3">
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Atención inmediata
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Soporte por WhatsApp
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Técnicos certificados
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#planes">Planes</a>
-                <a href="#cobertura">Cobertura</a>
+        </div>
+    </section>
+
+        <section id="planes" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Planes de Internet</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Elige el plan perfecto para ti. Instalación gratuita incluida en todos nuestros planes.</p>
             </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plan Básico -->
+                <div class="relative bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-6 border border-gray-100">
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Plan Básico</h3>
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="text-3xl font-bold text-gray-900">$300</span>
+                            <span class="text-lg text-gray-600 ml-2">/mes</span>
+                        </div>
+                        <div class="text-2xl font-bold text-blue-600 mb-4">30 Mbps</div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-gray-600 text-lg">Ideal para hogares</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-gray-600 text-lg">WiFi incluido</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-gray-600 text-lg">Soporte básico</span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 px-6 text-center rounded-lg border-2 border-blue-600 text-blue-600 text-lg font-semibold hover:bg-blue-50 transition-colors duration-300">Contratar</a>
+                </div>
+
+                <!-- Plan Medio (Destacado) -->
+                <div class="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl shadow-xl transform scale-105 transition-all duration-300 hover:scale-105 p-6">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-blue-900 text-sm font-medium px-4 py-1 rounded-bl-lg rounded-tr-xl">
+                        Más Popular
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-white mb-3">Plan Medio</h3>
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="text-3xl font-bold text-white">$350</span>
+                            <span class="text-lg text-blue-100 ml-2">/mes</span>
+                        </div>
+                        <div class="text-2xl font-bold text-yellow-400 mb-4">50 Mbps</div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-white text-lg">Ideal para familias</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-white text-lg">WiFi de alta potencia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-white text-lg">Soporte prioritario</span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 px-6 text-center rounded-lg bg-white text-blue-600 text-lg font-semibold hover:bg-blue-50 transition-colors duration-300">Contratar Ahora</a>
+                </div>
+
+                <!-- Plan Avanzado -->
+                <div class="relative bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-6 border border-gray-100">
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Plan Avanzado</h3>
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="text-3xl font-bold text-gray-900">$400</span>
+                            <span class="text-lg text-gray-600 ml-2">/mes</span>
+                        </div>
+                        <div class="text-2xl font-bold text-blue-600 mb-4">100 Mbps</div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-gray-600 text-lg">IP fija incluida</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-gray-600 text-lg">Soporte 24/7</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span class="text-gray-600 text-lg">SLA garantizado</span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 px-6 text-center rounded-lg border-2 border-blue-600 text-blue-600 text-lg font-semibold hover:bg-blue-50 transition-colors duration-300">Contratar</a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 México en línea. Todos los derechos reservados.</p>
+    </section>
+
+    <section id="cobertura" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Área de Cobertura</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Brindamos servicio de internet de alta velocidad en toda la zona del Istmo de Tehuantepec</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">Localidades con Servicio</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Juchitán de Zaragoza</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">El Espinal</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Ciudad Ixtaltepec</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">La Ventosa</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">La Venta</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Unión Hidalgo</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">La Blanca</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Cazaderos</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Cerro Iguana</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                                <span class="text-blue-600 font-semibold">¡Seguimos creciendo!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15283.00584614654!2d-95.0229937!3d16.4331021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1696661400000!5m2!1ses!2smx"
+                        width="100%"
+                        height="500"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contáctanos</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Estamos aquí para responder tus preguntas y ayudarte a elegir el mejor plan para ti</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+                <!-- Información de Contacto -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="mb-6 flex justify-center">
+                        <img src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg" 
+                             alt="Atención al Cliente" 
+                             class="w-40 h-auto rounded-lg shadow-sm"
+                             onerror="this.onerror=null; this.src='https://img.freepik.com/free-vector/organic-flat-customer-support-illustration_23-2148899174.jpg';">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Información de Contacto</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-xl text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Teléfonos</p>
+                                <p class="text-lg font-semibold text-gray-900">971 164 6537</p>
+                                <p class="text-lg font-semibold text-gray-900">971 208 0143</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-xl text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">WhatsApp</p>
+                                <p class="text-lg font-semibold text-gray-900">971 164 6537</p>
+                                <p class="text-lg font-semibold text-gray-900">971 208 0143</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-location-dot text-xl text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Dirección</p>
+                                <p class="text-lg font-semibold text-gray-900">Calle 5 de Septiembre #116</p>
+                                <p class="text-gray-600">Col. Centro, Juchitán de Zaragoza, Oax. CP.70000</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                            <p class="text-blue-600 text-center">¡Visítanos en nuestra oficina! Horario de atención: Lunes a Sábado de 9:00 AM a 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Envíanos un mensaje</h3>
+                    <form id="contactForm" onsubmit="return sendToWhatsApp(event)" class="space-y-4">
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                            <input 
+                                type="text" 
+                                name="nombre" 
+                                id="nombre" 
+                                required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+                                placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                            <input 
+                                type="email" 
+                                name="email" 
+                                id="email" 
+                                required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+                                placeholder="tu@email.com">
+                        </div>
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                            <input 
+                                type="tel" 
+                                name="telefono" 
+                                id="telefono" 
+                                required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+                                placeholder="Tu número de teléfono">
+                        </div>
+                        <div>
+                            <label for="plan" class="block text-sm font-medium text-gray-700 mb-1">Plan de interés</label>
+                            <select 
+                                name="plan" 
+                                id="plan" 
+                                required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-200">
+                                <option value="">Selecciona un Plan</option>
+                                <option value="Plan Básico - 30 Mbps">Plan Básico - 30 Mbps</option>
+                                <option value="Plan Medio - 50 Mbps">Plan Medio - 50 Mbps</option>
+                                <option value="Plan Avanzado - 100 Mbps">Plan Avanzado - 100 Mbps</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje adicional (opcional)</label>
+                            <textarea 
+                                name="mensaje" 
+                                id="mensaje" 
+                                rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+                                placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <button 
+                            type="submit" 
+                            class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center space-x-2">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Enviar por WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2025 México en línea. Todos los derechos reservados.</p>
         </div>
     </footer>
 
