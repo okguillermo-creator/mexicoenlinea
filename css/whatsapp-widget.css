@@ -72,3 +72,24 @@
     margin-bottom: 10px;
     white-space: pre-line;
 }
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.button-container button {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.button-container button:hover {
+    background: #128C7E;
+}

@@ -54,16 +54,26 @@ const whatsappWidget = {
             content.classList.add('hidden');
         });
 
-        // Manejar respuestas numéricas y letras
-        widget.addEventListener('keypress', (e) => {
-            const key = e.key.toUpperCase();
-            if ((key >= '1' && key <= '5') || key === 'A' || key === 'B') {
-                this.handleResponse(key, config);
-            }
-        });
+        // Manejar respuestas con botones
+        const messageDiv = document.querySelector('.widget-body');
+        messageDiv.innerHTML = `
+            <div class="message">${config.welcomeMessage}</div>
+            <div class="button-container">
+                <button onclick="whatsappWidget.handleResponse('1', this.closest('.whatsapp-widget').config)">1️⃣ Planes y precios</button>
+                <button onclick="whatsappWidget.handleResponse('2', this.closest('.whatsapp-widget').config)">2️⃣ Consultar cobertura</button>
+                <button onclick="whatsappWidget.handleResponse('3', this.closest('.whatsapp-widget').config)">3️⃣ Soporte técnico</button>
+                <button onclick="whatsappWidget.handleResponse('4', this.closest('.whatsapp-widget').config)">4️⃣ Contactar asesor</button>
+                <button onclick="whatsappWidget.handleResponse('5', this.closest('.whatsapp-widget').config)">5️⃣ Reportar falla</button>
+            </div>
+        `;
     },
 
     handleResponse: function(option, config) {
+        if (!config) {
+            config = this.currentConfig; // Usar configuración guardada
+        } else {
+            this.currentConfig = config; // Guardar configuración para uso futuro
+        }
         const messages = {
             '1': {
                 text: 'Hola, me gustaría información sobre los planes y precios de internet',
@@ -102,8 +112,14 @@ const whatsappWidget = {
         if (response) {
             if (response.showOptions) {
                 // Mostrar opciones adicionales
-                const messageDiv = document.querySelector('.widget-body .message');
-                messageDiv.textContent = response.message;
+                const messageDiv = document.querySelector('.widget-body');
+                messageDiv.innerHTML = `
+                    <div class="message">${response.message}</div>
+                    <div class="button-container">
+                        <button onclick="whatsappWidget.handleResponse('A', whatsappWidget.currentConfig)">A) Oficina Principal</button>
+                        <button onclick="whatsappWidget.handleResponse('B', whatsappWidget.currentConfig)">B) Oficina Soporte</button>
+                    </div>
+                `;
                 return;
             }
 
